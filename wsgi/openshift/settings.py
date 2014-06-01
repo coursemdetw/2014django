@@ -83,6 +83,8 @@ if ON_OPENSHIFT:
             'NAME': os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'db.sqlite3'),
         }
     }
+    # try to use https for OpenShift
+    os.environ['wsgi.url_scheme'] = 'https'
 else:
     DATABASES = {
         'default': {
