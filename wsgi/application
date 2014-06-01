@@ -7,8 +7,8 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
 if 'OPENSHIFT_REPO_DIR' in os.environ:
     # on OpenShift Paas
-    # use https on OpenShift
-    os.environ['HTTPS'] = "on"
+    # try to use https for OpenShift
+    os.environ['wsgi.url_scheme'] = 'https'
     sys.path.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR'], 'wsgi', 'openshift'))
     virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/venv'
     os.environ['PYTHON_EGG_CACHE'] = os.path.join(virtenv, 'lib/python3.3/site-packages')
