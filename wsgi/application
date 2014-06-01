@@ -20,3 +20,6 @@ imp.find_module('openshiftstaticfiles')
 import openshiftstaticfiles
 from django.core.wsgi import get_wsgi_application
 application = openshiftstaticfiles.Cling(get_wsgi_application())
+
+
+

@@ -7,6 +7,7 @@ import os
 # for the specific client drivers/modules your application needs.
 packages = ['Django<=1.6',
             'static3',  # If you want serve the static files in the same server
+            'mezzanine<=3.1.4',
             # 'mysql-connector-python',
             # 'pymongo',
             # 'psycopg2',
